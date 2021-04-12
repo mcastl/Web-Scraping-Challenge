@@ -11,9 +11,9 @@ The following screenshots shows the final application:
 
 ## Sources
 * [Mars News Site](https://redplanetscience.com/)
-* Featured Space Image from Mars site [here](https://spaceimages-mars.com)
-* Mars Facts webpage [here](https://galaxyfacts-mars.com)
-* Mars astrogeology site [here](https://marshemispheres.com/)
+* [Featured Space Image from Mars](https://spaceimages-mars.com)
+* [Mars Facts webpage](https://galaxyfacts-mars.com)
+* [Mars astrogeology site](https://marshemispheres.com/)
 
 ## Status
 Project is:  _finished_, _subject to improvement_
