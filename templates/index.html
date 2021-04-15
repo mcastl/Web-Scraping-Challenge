@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1><strong>Mision to Mars</strong></h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+
+    <!-- Mars News -->
+    <div class="row justify-content">
+      <div class="col-sm-12"></div>
+        <h3><strong>Latest Mars News</strong></h3>
+        <h4><strong>{{ mars.news_title }}</strong></h4>
+        <h5>{{ mars.news_p }}</h5>
+      </div>
+    </div>
+
+    <!--Mars Image  -->
+    <div class="row">
+      <div class="col-md-8">
+        <h3><strong>Featured Mars Image</strong></h3>
+        <img src="{{ mars.feature_img }}" alt="Mars">
+      </div>
+
+    <!-- Mars Facts Table -->
+      <div class="col-md-4">
+        <aside class="mt-5">
+          <h4><strong>Mars Facts</strong></h4>
+          <div style="max-width: 500px; max-height: 250px; font-size: 16px; margin-bottom: 100px;">
+            {{mars.mars_fact | safe}}
+          </div>
+        </aside>
+      </div>
+    </div>
+
+  <!-- Hemisphere images -->
+  <div class="container">
+    <div class="row text-center mt-5 p-3">
+      <h3 class="font-bold text-center w-100">Mars Hemispheres</h3>
+    </div>
+  </div>
+  <div class="container align-items">
+     <div class="row align-items">
+      {% for hemisphere in mars.mars_hemispheres %}
+      <div class="col-md-3">
+        <div class="card m-4">
+          <img src="{{ hemisphere.img_url }}" width="200" height="200" alt="Mars Hemisphere">
+          <div class="card-body">
+            <h4 class="card-title"><strong>{{hemisphere.title}}</strong></h4>
+          </div>
+        </div>
+      </div>
+      {% endfor %} 
+    </div>
+  </div>
+</body>
+
+
+</html>
